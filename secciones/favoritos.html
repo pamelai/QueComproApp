@@ -1,0 +1,24 @@
+<div ui-content-for="title">
+    <h2>Favoritos</h2>
+</div>
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class='section section' id='fav'>
+            <p class="vacio">{{vacio}}</p>
+            <ul>
+                <li ng-init='id=$index' ng-repeat="fav in aFavs">
+                    <i ui-turn-on="confirm_fav" class="far fa-minus" ng-click='PasarItem(fav)'></i>
+                    <figure>
+                        <img ng-src="img/320/{{fav.img}}" alt="{{fav.nombre}}">
+                    </figure>
+
+                    <figcaption>{{fav.nombre}}</figcaption>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div ui-content-for="modals">
+    <div ng-include="'secciones/confirm_fav.html'"></div>
+</div>

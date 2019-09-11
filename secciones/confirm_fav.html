@@ -1,0 +1,20 @@
+<div class="modal" ui-if="confirm_fav" ui-shared-state="confirm_fav">
+      <div class="modal-backdrop in"></div>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" 
+                    ui-turn-off="confirm_fav">&times;</button>
+            <h4 class="modal-title">Eliminar favorito</h4>
+          </div>
+          <div class="modal-body">
+            <p>¿Estás seguro de eliminar {{item.nombre}} de tus favoritos?</p>
+          </div>
+          <div class="modal-footer">
+            <button ui-turn-off="confirm_fav" class="btn" ng-click='BorrarFav(item)'>Si</button>
+            <button ui-turn-off="confirm_fav" class="btn">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    

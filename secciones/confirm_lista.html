@@ -1,0 +1,20 @@
+<div class="modal" ui-if="confirm_lista" ui-shared-state="confirm_lista">
+      <div class="modal-backdrop in"></div>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" 
+                    ui-turn-off="confirm_lista" >&times;</button>
+            <h4 class="modal-title">Eliminar lista</h4>
+          </div>
+          <div class="modal-body">
+            <p>¿Estás seguro de eliminar esta lista?</p>
+          </div>
+          <div class="modal-footer">
+            <button ui-turn-off="confirm_lista" class="btn" ng-click='Borrar(item)'>Si</button>
+            <button ui-turn-off="confirm_lista" class="btn">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    

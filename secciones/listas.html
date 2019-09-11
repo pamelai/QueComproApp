@@ -1,0 +1,23 @@
+<div class="scrollable">
+    <div class="scrollable-content">
+        <div class="section section">
+            <p class='vacio'>{{vacio}}</p>
+            <p>{{drag}}</p>
+            <ul id='ul_listas'>
+                <li class='listas section section-break' ng-repeat="lista in aListas">
+                <i class="far fa-trash-alt" ui-turn-on="confirm_lista" ng-click="PasarItem(lista)"></i>
+                    <h3>Lista #{{$index+1}}</h3>
+            
+                    <ul>
+                        <li ng-repeat='items in lista | orderBy:"+"' >{{items.nombre}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+            
+    </div>
+</div>
+
+<div ui-content-for="modals">
+    <div ng-include="'secciones/confirm_lista.html'"></div>
+</div>

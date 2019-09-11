@@ -1,0 +1,424 @@
+@font-face {
+    font-family: 'rm';
+    src: url('../tipos/raleway-medium-webfont.eot');
+    src: url('../tipos/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../tipos/raleway-medium-webfont.woff2') format('woff2'),
+         url('../tipos/raleway-medium-webfont.woff') format('woff'),
+         url('../tipos/raleway-medium-webfont.ttf') format('truetype'),
+         url('../tipos/raleway-medium-webfont.svg#rm') format('svg');
+}
+
+@font-face {
+    font-family: 'rr';
+    src: url('../tipos/raleway-regular-webfont.eot');
+    src: url('../tipos/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../tipos/raleway-regular-webfont.woff2') format('woff2'),
+         url('../tipos/raleway-regular-webfont.woff') format('woff'),
+         url('../tipos/raleway-regular-webfont.ttf') format('truetype'),
+         url('../tipos/raleway-regular-webfont.svg#rr') format('svg');
+}
+
+*{
+    font-family: 'rr', sans-serif;
+    font-size: 16px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+figcaption{
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+figure{
+    text-align: center;
+}
+
+i{
+    color:#009579;
+}
+
+.section{
+    padding: 20px;
+    min-height: 100%;
+}
+
+input:focus,
+button:focus{
+    outline: none;
+}
+
+img{
+    width: 100%;
+    max-width: 200px;
+}
+
+.app-content-loading {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    position: relative;
+}
+
+.loading-spinner {
+    position: absolute;
+    font-size: 50px;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+.modal-header,
+.modal-footer{
+    border:none;
+}
+
+.modal-header .close{
+    margin-top:-10px;
+    color: #009579;
+    opacity: initial; 
+    font-size: 31px;
+}
+
+.modal-footer{
+    text-align: center;
+}
+
+.modal-footer> :first-child{
+    margin-right: 15px;
+}
+
+.modal-footer .btn{
+    border: 1px solid #009579;
+    border-radius: 5px;
+    color: #009579;
+    background: none;
+    padding: 0;
+    height: 35px;
+    width: 45px;
+}
+
+.modal-body p{
+    text-align: center;
+}
+
+.modal-content{
+    height: 200px;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px
+}
+
+.modal-dialog{
+    position: absolute;
+    width: calc(100vw - 20px);
+    max-width: 580px;
+    top: calc(50% - 100px);
+}
+
+/*********** NAV-BAR ***********/
+.navbar-brand{
+    background-color: #009579;
+    color: white;
+    padding: 10px 0;
+}
+
+#logo{
+    text-indent: -9000px;
+    background: url(../img/logo.png) no-repeat center center;
+    height: 30px;
+    margin-top: -2px;
+}
+
+.navbar-brand h2{
+    line-height: 30px;
+    font-size: 1.25em;
+    letter-spacing: 0.5px;
+    font-family: 'rm';
+}
+
+.btn-group .btn-navbar{
+    color:#009579;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    padding: 0;
+}
+
+.btn-group .btn-navbar i{
+    margin-right: 5px;
+}
+
+.btn.btn-navbar.active i{
+    font-weight: 900;
+}
+
+
+/*********** LISTAS ***********/
+.fa-trash-alt{
+    font-size: 1.25em;
+}
+
+.fav,
+.listas{
+    position: relative;
+}
+
+.listas{
+    border:1px solid #009579;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+#ul_listas> :last-child{
+    margin-bottom: 0;
+}
+
+.listas i{
+    position: absolute;
+    top:15px;
+    right: 15px;
+    font-size: 1.5em;
+}
+
+.listas h3{
+    font-size: 1.25em;
+    font-family: 'rm';
+}
+
+.listas ul li::before{
+    content: '–';
+    color: #009579;
+    margin-right: 5px;
+}
+
+.dismiss {
+    -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+    -moz-transition: opacity 300ms, -moz-transform 300ms;
+    transition: opacity 300ms, transform 300ms;
+    opacity: 0.5;
+  }
+  
+.dismitted {
+    -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+    -moz-transition: opacity 300ms, -moz-transform 300ms;
+    transition: opacity 300ms, transform 300ms;
+    opacity: 0;
+}
+
+.vacio{
+    text-align: center;
+    font-size: 1.15em;
+    position: absolute;
+    top: calc(50% - 11.5px);
+    width: calc(100vw - 40px);
+}
+
+
+/*********** PRODUCTOS/FAVORITOS ***********/
+.scrollable-header{
+    height: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+.scrollable-header div{
+    height: 40px;
+    border: solid 1px #979797;
+    border-radius: 0 0 0 5px ;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.scrollable-header div i{
+    padding-right: 7px;
+}
+
+.scrollable-header input{
+    border: none;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+}
+
+.guardar{
+    height: 40px;
+    display: block;
+    color: #009579;
+    background-color: white;
+    border-radius: 0 0 5px 0;
+    border: 1px solid #009579;
+    border-left-width: 0;
+}
+
+.scrollable-header button:active{
+    color: white;
+    background-color: #009579;
+}
+
+.scrollable-header p{
+    background-color: white;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: #ff4444;
+    text-align: center;
+    margin:0;
+    font-size: 0.9em;
+
+}
+
+#prod> :last-child input{
+    display: none;
+}
+
+#prod> :last-child,
+#fav ul{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#prod> :last-child div,
+#prod> :last-child div label{
+    display: block;
+    width: 100%;
+}
+
+
+#prod> :last-child div > :nth-child(3):checked + label figcaption{
+    background-color:#009579;
+    color: white;
+    font-family: 'rm';
+}
+
+#prod> :last-child div figcaption,
+#fav figcaption{
+    border-bottom: 1px solid #009579;
+    padding-bottom: 5px;
+}
+
+#prod> :last-child div> :nth-child(2),
+#fav ul li i{
+    display: block;
+    text-align: right;
+    color: #009579;
+    font-size: 1.5em;
+}
+
+#prod> :last-child div> :nth-child(1):checked + :nth-child(2){
+    font-weight: 900; 
+}
+
+
+/*********** INFO ***********/
+#info h3{
+    text-align: center;
+}
+
+#info h3+p{
+    text-align: center;
+}
+
+#info p+h3{
+    margin-top: 20px;
+}
+
+#info h4{
+    margin: 20px 0 15px 0;
+    padding-bottom: 5px;
+    color: #009579;
+    font-family: 'rr';
+    font-weight: bold;
+}
+
+.panel{
+    border-bottom: 1px solid #009579;
+    box-shadow: none;
+}
+
+.panel-group .panel{
+    border-radius: 0;
+}
+
+#info span{
+    display: inline-block;
+    color: #009579;
+    margin: 0 5px;
+}
+
+#info span[class='guardar']{
+    border: 1px solid #009579;
+    border-radius: 5px;
+    padding: 0 5px;
+    height: 25px;
+}
+
+#info span i {
+    margin-right: 5px;
+}
+
+
+
+@media screen and (min-width: 450px){
+    #prod> :last-child,
+    #fav ul{
+        grid-gap: 30px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .modal-dialog{
+        right: calc(50% - 300px);
+    }
+    
+    
+/*********** PRODUCTOS/FAVORITOS ***********/
+    #prod> :last-child,
+    #fav ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+/*********** LISTAS ***********/
+    #ul_listas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .listas{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 900px){
+/*********** PRODUCTOS/FAVORITOS ***********/ 
+    #prod> :last-child,
+    #fav ul{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+/*********** LISTAS ***********/
+    #ul_listas{
+        grid-gap: 30px;
+    }
+}

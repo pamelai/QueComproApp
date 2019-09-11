@@ -1,0 +1,32 @@
+<div class="scrollable-content">
+   <div class='section' id='prod'>
+      <div class="scrollable-header">
+         <div>
+         <i class="far fa-search"></i>
+         <input
+      type="search"
+      ng-model='producto'
+      placeholder="Buscar"/>
+         </div>
+         <button ng-click='CrearLista()' class='guardar'>Guardar lista</button>
+
+         <p ng-if='no_lista'>{{no_lista}}</p>
+      </div>
+      
+      <div>
+         <div ng-repeat='p in aProductos | filter: producto'>
+            
+            <input type="checkbox" ng-model="p.selected" ng-value="p.selected" ng-click="Favorito(p)" id='fav{{p.id}}'/>
+            <label for='fav{{p.id}}' class="fal fa-heart"></label>
+            
+            <input type="checkbox" ng-model='p.estado' id='{{p.id}}'>
+            <label for='{{p.id}}'>
+               <figure class='prod_img'>
+                  <img ng-src="img/320/{{p.img}}" alt="{{p.nombre}}">
+                  <figcaption>{{p.nombre}}</figcaption>
+               </figure>
+            </label>
+         </div>
+      </div>
+   </div>
+</div>

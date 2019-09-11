@@ -1,0 +1,64 @@
+<div class="panel-group" ui-shared-state="myAccordion" ui-default="1">
+   
+
+   <div class="panel" >
+      <div ui-set="{'myAccordion': 1}">
+         <h4 class="panel-title"> Crear listas </h4>
+      </div>
+
+      <div ui-if="myAccordion == 1">
+         <div >
+            <p>Tener tu lista de compras y llevarla a donde vayas nunca fue tan sencillo. Solo debes ir a la sección <span><i class="far fa-apple-alt"></i>Productos</span>, seleccionar 1 o más productos, presionar el botón <span class='guardar'>Guardar lista</span> y listo, serás redirigido a la vista de listas donde podrás visualizarla.</p>
+         </div>
+      </div>
+   </div>
+
+   <div class="panel">
+      <div ui-set="{'myAccordion': 2}">
+         <h4 class="panel-title">Buscador de productos</h4>
+      </div>
+
+      <div ui-if="myAccordion == 2">
+         <div >
+            <p>Para encontrar productos rápidamente dentro de la sección <span><i class="far fa-apple-alt"></i>Productos</span>, solo deberás presionar en el buscador y comenzar a escribir el nombre del producto, automáticame comenzarán a aparecer las coincidencias, seleccionas el productos y prodrás agregarlo a la lista</p>
+         </div>
+      </div>
+   </div>
+
+   <div class="panel">
+      <div ui-set="{'myAccordion': 3}">
+         <h4 class="panel-title"> Eliminar lista </h4>
+      </div>
+
+      <div ui-if="myAccordion == 3">
+         <div >
+            <p>A la hora de eliminar una lista solo tendrás que deslizar la lista a eliminar hacia la derecha.</p>
+         </div>
+      </div>
+   </div>
+
+   <div class="panel">
+      <div ui-set="{'myAccordion': 4}">
+         <h4 class="panel-title"> Agregar favoritos </h4>
+      </div>
+
+      <div ui-if="myAccordion == 4">
+         <div >
+            <p>Para acceder rápidamente a los productos que compras con mayor regularidad, solo debes ir a la sección <span><i class="far fa-apple-alt"></i>Productos</span> y presionar el ícono de corazón (<i class="fal fa-heart"></i>). Automáticamente ya prodrás ver el productos en la vista de <span><i class="far fa-heart"></i>Favoritos</span></p>
+         </div>
+      </div>
+   </div>
+
+   <div class="panel">
+      <div ui-set="{'myAccordion': 5}">
+         <h4 class="panel-title"> Eliminar favoritos </h4>
+      </div>
+
+      <div ui-if="myAccordion == 5">
+         <div >
+            <p>Si no quieres tener más un productos en favoritos, puedes, en la vista <span><i class="far fa-heart"></i>Favoritos</span> presionar el botón <i class="far fa-minus"></i> o ir a la vista <span><i class="far fa-apple-alt"></i>Productos</span> presionar nuevamente el ícono <i class="fas fa-heart"></i>, del producto a eliminar, volviendo a su apariencia inicial (<i class="fal fa-heart"></i>) </p>
+         </div>
+      </div>
+   </div>
+
+</div>
